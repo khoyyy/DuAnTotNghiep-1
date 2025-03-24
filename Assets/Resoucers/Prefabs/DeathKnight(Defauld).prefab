@@ -365919,6 +365919,8 @@ GameObject:
   - component: {fileID: 6470209226138881707}
   - component: {fileID: 8820476618230405540}
   - component: {fileID: 6119948873406067443}
+  - component: {fileID: -6055070342146523646}
+  - component: {fileID: -4472085444037832670}
   m_Layer: 0
   m_Name: DeathKnight(Defauld)
   m_TagString: Player
@@ -366047,6 +366049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d686fbac6f6304085b55876a55e879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  virtualCameraTaget: {fileID: 0}
   animator: {fileID: 2988656143375910529}
   moveSpeed: 5
   jumpForce: 7
@@ -366063,7 +366066,6 @@ MonoBehaviour:
   audioClipJump: {fileID: 8300000, guid: c6126525018d4b5428aacfa61c7c9fdf, type: 3}
   audioClipWalk: {fileID: 8300000, guid: e9714160ce34f2b4ab63ff8c27bd68e1, type: 3}
   audioClipRun: {fileID: 8300000, guid: 5a9383dda6cabc047b7a297602e93eb4, type: 3}
-  audioClipE: {fileID: 8300000, guid: 0def67f76d0c38441a819aa49ea182c7, type: 3}
 --- !u!54 &6218209755481865903
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -366104,6 +366106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHP: {fileID: 6133005929217927552}
+  maxHp: 1000
   currentMana: {fileID: 5596118285165936406}
   currentUlti: {fileID: 3611733779197522641}
   currentExp: {fileID: 3486375451420509683}
@@ -366113,7 +366116,6 @@ MonoBehaviour:
   textExp: {fileID: 2102146234669308321}
   textLevel: {fileID: 4307277000271489541}
   textScore: {fileID: 1981821209800801081}
-  score: 0
   level: 40
   levelEffect: {fileID: 7999798785178081743}
   panelGameOver: {fileID: 0}
@@ -366121,6 +366123,7 @@ MonoBehaviour:
   audioTakeHit: {fileID: 8300000, guid: a191e0729b7430544aca70ff44365e5f, type: 3}
   audioClipLv: {fileID: 8300000, guid: 7d42b61fa112bb6448987ee6c17bc78b, type: 3}
   characterController: {fileID: 8797317714009473468}
+  isUlti: 1
 --- !u!136 &4309114907045874343
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -366619,7 +366622,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sliderHP: {fileID: 8170415207334450642}
-  item: {fileID: 0}
+--- !u!114 &-6055070342146523646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9044660304206484902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 3262369992
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: -4472085444037832670}
+  ForceRemoteRenderTimeframe: 0
+--- !u!114 &-4472085444037832670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9044660304206484902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stateAuthorityChangeErrorCorrectionDelta: 0
+  SyncScale: 0
+  SyncParent: 0
+  _autoAOIOverride: 1
+  DisableSharedModeInterpolation: 0
 --- !u!1 &9121792431611406146
 GameObject:
   m_ObjectHideFlags: 0
